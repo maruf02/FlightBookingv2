@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn for tailwind css and Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- cdn for tailwind css and Daisy UI -->
+    <!-- date picker linkup -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- date picker linkup -->
+    <!-- icon cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icon cdn -->
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- google font link -->
+    <!-- icon setup -->
+    <link rel="icon" type="image/x-icon" href="./Assets/Image/title.svg">
+    <title>Flight Booking Airlines</title>
+
+
+
+
+</head>
+
+<body class="bg-white w-full h-fit pb-32 font-sans text-black">
+    <header>
+        <!-- Banner section start -->
+        <div class="hero h-[800px]" style="background-image: url(../Assets/Image/banner.jpg);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="">
+                    <!-- logo section -->
+                    <Section class="flex gap-2 pt-8">
+                        <img src="./Assets/Image/logo.png" alt=""
+                            class="w-4/5  md:w-2/5 h-16 -mt-20 rounded-3xl relative left-[10%] md:left-[30%]">
+                    </Section>
+                    <!-- banner pic section -->
+                    <section class="pt-15 pb-8 ">
+                        <img src="./Assets/Image/ss.webp" alt=""
+                            class="w-56 h-56   rounded-full p-1 relative left-[22%] md:left-[35%]">
+                    </section>
+                    <!-- banner text section -->
+                    <p>
+                        <span class="badge bg-green-800 badge-sm relative top-[1px]"> </span>
+                        <span class="text-xl text-white">AGENTS AVAILABLE NOW!</span>
+                    </p>
+                    <p class="text-4xl font-bold text-white pt-3">Call Us Now!</p>
+
+
+                    <p class="text-[#Ff0000] text-3xl w-full font-bold"><span class="underline">RESERVE</span> Your
+                        Flights, Make
+                        Changes, or Cancel Flight!</p>
+
+
+                    <!-- star rating -->
+                    <section class="rating rating-lg pt-5">
+                        <input type="radio" name="rating-8" class="mask mask-star-2 bg-green-500" />
+                        <input type="radio" name="rating-8" class="mask mask-star-2 bg-green-500" />
+                        <input type="radio" name="rating-8" class="mask mask-star-2 bg-green-500" />
+                        <input type="radio" name="rating-8" class="mask mask-star-2 bg-green-500" />
+                        <input type="radio" name="rating-8" class="mask mask-star-2 bg-green-500" checked />
+                    </section>
+                    <section>
+                        <a href="tel:+1-866-609-1398">
+                            <button>
+                                <p
+                                    class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
+                                    <span class="w-8 h-8 pt-2"><img src="./Assets/Image/call.png" alt=""></span>
+                                    <span class="pt-0 pl-2 text-4xl">Call Now</span>
+                                </p>
+                            </button>
+                        </a>
+                    </section>
+                    <section class="pt-4">
+                        <p><span class="badge bg-green-800 badge-sm relative top-[1px]"></span>
+                            <span class="text-xl text-white"> NO HOLD TIME! NO WAITING!</span>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!-- Banner section start -->
+        <!-- form section -->
+        <div class="py-5">
+            <div class="container text-center border-2 w-full lg:w-2/5 h-fit mx-auto py-5">
+                <section
+                    class="w-full border-4 border-dashed border-gray-400 shadow-2xl text-center mx-auto lg:px-8 py-2 bg-gray-200">
+                    <p class="underline text-3xl lg:text-5xl text-red-900 ">*CALL TO SAVE BIG*</p>
+                    <p class=" text-2xl lg:text-5xl   ">On ALL Airline Tickets!</p>
+                </section>
+
+                <section class="pt-5">
+                    <p class="bg-red-700 lg:w-3/4 mx-auto py-2 text-2xl uppercase">CALL FOR TICKET DEALS!</p>
+                </section>
+                <section class="">
+                    <a href="tel:+1-866-609-1398">
+                        <button>
+                            <p
+                                class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
+                                <span class="w-8 h-8"><img src="./Assets/Image/call.png" alt=""></span>
+                                <span class="pt-0 pl-2 text-2xl">Call Now</span>
+                            </p>
+                        </button>
+                    </a>
+
+                </section>
+                <section class="py-5 ">
+                    <p class="bg-red-700 lg:w-3/4 mx-auto py-2 text-2xl uppercase ">RESERVE YOUR FLIGHT!</p>
+                </section>
+
+                <!--******************reserve form******************************** -->
+                <section class="border-4 border-dashed border-gray-400 shadow-2xl lg:w-4/5 mx-auto h-full">
+
+                    <div>
+                        <form class="p-8 flex-1">
+
+                            <div class="space-y-2  text-black">
+                                <label htmlFor="email" class="block text-left pl-2 text-xl">Which Trip</label>
+                                <select
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff] "
+                                    required>
+                                    <option disabled selected>Select Trip</option>
+                                    <option>One way Trip</option>
+                                    <option>Round Trip</option>
+                                </select>
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Email:</label>
+                                <input id="email" type="email" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required />
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Departure
+                                    City:</label>
+                                <input id="email" type="text" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required />
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Arrival
+                                    City:</label>
+                                <input id="email" type="text" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required />
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Departure
+                                    Date:</label>
+                                <input id="departureDate" type="date" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required readonly />
+                                <!-- <input id="departureDate" type="date"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed invalid:border-red-700 valid:border-[#0095ff]"
+                                    required /> -->
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Name *</label>
+                                <section class="flex gap-5">
+                                    <section class="flex flex-col w-1/2">
+                                        <input id="email" type="email" placeholder="example@example.com"
+                                            class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                            required />
+                                        <label htmlFor="email" class="block text-left pl-2 text-base text-red-600">First
+                                            Name *</label>
+                                    </section>
+                                    <section class="flex flex-col w-1/2">
+                                        <input id="email" type="email" placeholder="example@example.com"
+                                            class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                            required />
+                                        <label htmlFor="email" class="block text-left pl-2 text-base text-red-600">
+                                            last
+                                            Name *</label>
+                                    </section>
+
+                                </section>
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Email:</label>
+                                <input id="email" type="email" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required />
+                                <label htmlFor="email" class="block text-left pl-2 pt-5 text-xl">Phone:</label>
+                                <input id="email" type="text" placeholder="example@example.com"
+                                    class="p-3 block w-full bg-gray-200 shadow-lg outline-none border-2 rounded-md border-dashed  invalid:border-red-700 valid:border-[#0095ff]"
+                                    required />
+
+                            </div>
+                            <button type="submit"
+                                class="py-2 px-5 mb-4 mt-8 text-white w-full text-3xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">Submit</button>
+                        </form>
+                    </div>
+
+                </section>
+                <!--******************reserve form******************************** -->
+                <section class="pt-5 text-[11px] lg:px-14">
+                    <p>By clicking the “CALL” or “RESERVE FLIGHTS” button anywhere on this entire website; you
+                        automatically agree to the TCPA
+                        Disclosure of this website. You may opt-out of any future contact via text message by
+                        replying anytime with “STOP”.</p>
+                </section>
+            </div>
+        </div>
+        <!-- form section -->
+        <!-- Domestic Section -->
+        <div class="container mx-auto px-2 lg:w-1/2 text-center pt-20 text-black">
+            <h1 class="text-2xl font-bold">Domestic & International 24/7 Flight Booking Helpline!</h1>
+            <p class="text-justify text-center">
+                Flight Booking 247 is a website that helps consumers who are in need of
+                flight booking reservations, and flight changes.
+                Are you searching for a specific airline phone number? We are here to help you with any domestic or
+                international flights. Our flight team helpline can help you book flights, make any reservation changes
+                or
+                cancellations at discounted rates. We aim to provide exceptional service and help you save money while
+                giving you the best possible
+                travel experience! Give us a call today and you will not be disappointed.</p>
+        </div>
+        <!-- Domestic Section -->
+        <!-- card Section -->
+        <div class="container mx-auto pt-16 flex flex-col md:flex-row justify-center gap-5">
+            <!-- first card -->
+            <div class="card w-96  bg-transparent shadow-xl  ">
+                <section class="text-white mx-auto pt-10">
+                    <p class="w-32 h-32 bg-red-900 rounded-full overflow-hidden  text-center">
+                        <i
+                            class="fa-solid fa-plane-departure text-white hover:text-gray-400 text-5xl relative top-8"></i>
+                    </p>
+                </section>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title ">CALL TO RESERVE FLIGHT</h2>
+                    <p class="">We are here to help you book your flight and find you the best deals! Whether
+                        it's domestic or international, anywhere in the world.
+                    </p>
+
+                </div>
+            </div>
+            <!-- first card -->
+            <!-- first card -->
+            <div class="card w-96  bg-transparent shadow-xl  ">
+                <section class="text-white mx-auto pt-10">
+                    <p class="w-32 h-32 bg-black rounded-full overflow-hidden  text-center">
+                        <i
+                            class="fa-solid fa-plane-departure text-white hover:text-gray-400 text-5xl relative top-8"></i>
+                    </p>
+                </section>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title ">CALL TO CHANGE FLIGHT</h2>
+                    <p class="">Do you need to change your flight? Don't worry, we are here to assist you and help you
+                        make any necessary changes to
+                        your flight.
+                    </p>
+
+                </div>
+            </div>
+            <!-- first card -->
+            <!-- first card -->
+            <div class="card w-96  bg-transparent shadow-xl  ">
+                <section class="text-white mx-auto pt-10">
+                    <p class="w-32 h-32 bg-green-900 rounded-full overflow-hidden  text-center">
+                        <i
+                            class="fa-solid fa-plane-departure text-white hover:text-gray-400 text-5xl relative top-8"></i>
+                    </p>
+                </section>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title ">CALL TO CANCEL FLIGHT</h2>
+                    <p class="">Do you need to cancel your flight? We understand that things come up. Don't worry, we
+                        are here to help you deal with
+                        your flight.
+                    </p>
+
+                </div>
+            </div>
+            <!-- first card -->
+        </div>
+        <!-- card Section -->
+        <!-- 24 hour section -->
+        <div class="container mx-auto lg:w-2/5 border mt-16">
+            <section>
+                <p class="text-2xl lg:text-4xl text-center">24 Hour LIVE Operators with <br>NO HOLD TIMES!</p>
+            </section>
+            <section class="py-10 text-center">
+                <p class="bg-red-700 lg:w-3/4 mx-auto py-2 text-2xl uppercase ">RESERVE YOUR FLIGHT!</p>
+                <section class=" mx-auto">
+                    <button>
+                        <p
+                            class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
+                            <span class="w-8 h-8"><img src="./Assets/Image/call.png" alt=""></span>
+                            <span class="pt-0 pl-2 text-2xl">Call Now</span>
+                        </p>
+                    </button>
+                </section>
+                <p class="bg-red-700 lg:w-3/4 mx-auto py-2 text-2xl uppercase mt-5">CHANGE or CANCEL!</p>
+            </section>
+
+
+        </div>
+        <!-- 24 hour section -->
+        <!-- seat section -->
+        <div>
+            <section>
+                <div class="hero w-full h-[700px]" style="background-image: url(./Assets/Image/seat.jpg);">
+                    <div class="hero-overlay bg-opacity-60"></div>
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-xl">
+                            <h1 class="mb-5 text-5xl font-bold">We’re Available 24/7</h1>
+                            <p class="mb-5">Call Us Now! We Can Help You With Anything Related To Airline Reservations!
+                            </p>
+                            <a href="tel:+1-866-609-1398">
+                                <button>
+                                    <p
+                                        class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
+                                        <span class="w-8 h-8"><img src="./Assets/Image/call.png" alt=""></span>
+                                        <span class="pt-0 pl-2 text-2xl">Call Now</span>
+                                    </p>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- seat section -->
+        <!-- description section -->
+        <div class="container mx-auto px-2 lg:w-2/5 border mt-16">
+            <section>
+                <h1 class="text-4xl text-black">Flight Booking 247 <span class="text-blue-700">Airline
+                        Reservations</span></h1>
+                <span class="underline">Airline Reservations</span> refer to the process of booking an airline ticket
+                for a seat on a flight operated
+                by any of the
+                major airlines we work with. This can typically be done through our website, or by phone through our
+                preferred travel
+                agent. Passengers usually need to provide personal information, such as their name and contact
+                information, as well as
+                information about the flight they wish to book, such as the departure and destination airports and the
+                date of travel.
+                Once the reservation is confirmed, the passenger will usually receive a booking confirmation and a
+                flight itinerary via
+                email.
+            </section>
+            <section>
+                <h1 class="pt-10 text-2xl text-black pb-5">Here are some tips for Booking A Flight:</h1>
+                <ul class="list-disc px-5 pb-5">
+                    <li><span class="text-lg font-bold">Book in advance:</span> Airline ticket prices tend to increase
+                        as the
+                        departure date approaches, so
+                        it’s generally best to book
+                        your flight as far in advance as possible.</li>
+                    <span class="text-lg font-bold"> </span>
+                    <li><span class="text-lg font-bold">Compare prices:</span> Use online travel agencies and airline
+                        websites to compare prices
+                        and find the
+                        best deal. Keep in mind
+                        that some airlines don’t list their flights on all booking sites, so it’s a good idea to check
+                        multiple sites.</li>
+                    <li><span class="text-lg font-bold"> Be flexible with your travel dates:</span> If your schedule
+                        allows it, consider traveling
+                        on weekdays,
+                        as ticket prices are
+                        generally higher on weekends.</li>
+                    <li><span class="text-lg font-bold"> Check for deals and discounts:</span> Sign up for email alerts
+                        from airlines and online travel agencies
+                        to be notified about
+                        sales and discounts.</li>
+                    <li><span class="text-lg font-bold">Consider alternative airports: </span> Look into flights to
+                        nearby airports, as they may be cheaper than
+                        flights to the main
+                        airport in your destination city.</li>
+                    <li><span class="text-lg font-bold"> Check baggage fees:</span> Some airlines charge extra fees for
+                        checked bags, so make sure to factor
+                        that into the cost of your
+                        ticket.</li>
+                    <li><span class="text-lg font-bold"> Be aware of any restrictions:</span> Before booking, make sure
+                        to read the airline’s terms and
+                        conditions, and be aware of any
+                        restrictions or fees that may apply, like change fees or cancellation policy.</li>
+                    <li><span class="text-lg font-bold"> Keep your travel documents handy:</span> After you have booked
+                        your flight, keep your travel documents
+                        in a safe place and make
+                        copies of important ones in case they get lost or stolen.</li>
+                </ul>
+            </section>
+            <section>
+                <h1 class="text-3xl font-bold py-3">What are the benefits of booking a flight through a travel agent on
+                    Flight Booking 247?</h1>
+                <p class="font-medium ">There are several benefits to booking a flight through a travel agent:</p>
+                <ol class="list-decimal px-5 pt-3 pb-8">
+                    <li><span class="text-lg font-bold">Expert advice: </span> Travel agents have extensive knowledge
+                        and experience in the industry and can
+                        offer valuable advice on
+                        destinations, flight options, and travel arrangements.</li>
+                    <li><span class="text-lg font-bold"> Time-saving:</span> Travel agents can save you time by doing
+                        the research and legwork for you. They can
+                        compare prices and
+                        options from multiple airlines and travel providers to find the best deal for you.</li>
+                    <li><span class="text-lg font-bold">Convenience: </span> Travel agents can take care of all the
+                        details of your trip, including booking
+                        flights, hotels, rental
+                        cars, and tours. This can be especially helpful for complex or multi-destination trips.</li>
+                    <li><span class="text-lg font-bold"> Access to exclusive deals:</span> Travel agents often have
+                        access to deals and discounts that are not
+                        available to the general
+                        public.</li>
+                    <li><span class="text-lg font-bold">Personalized service: </span> A good travel agent will get to
+                        know your preferences and travel style,
+                        and can make personalized
+                        recommendations to suit your needs.</li>
+                    <li><span class="text-lg font-bold">24/7 support: </span> Travel agents are available to assist you
+                        at any time, and can provide assistance
+                        with any issues or
+                        problems that may arise during your trip.</li>
+                    <li><span class="text-lg font-bold"> Payment protection:</span> In some cases, booking through a
+                        travel agent can provide some level of
+                        protection for your payment
+                        in case of bankruptcy or insolvency of the airline carrier.</li>
+                </ol>
+                <p class="pb-5">Keep in mind that it’s a good idea to do some research and read reviews to find a
+                    reputable travel
+                    agent before booking
+                    your flight.</p>
+            </section>
+            <!-- description section -->
+            <!-- <span class="text-lg font-bold">  </span> -->
+            <!-- best section -->
+            <section>
+                <h1 class="text-4xl font-bold pt-4 pb-3">When are the best days to travel by plane?</h1>
+                <p class="pb-2">The best days to travel by plane can vary depending on a number of factors, including
+                    the
+                    destination,
+                    the airline, and
+                    the time of year. However, there are some general trends that can help you find cheaper airline
+                    tickets:
+                </p>
+                <ul class="list-disc px-5 pb-5">
+                    <li><span class="text-lg font-bold"> Midweek travel:</span> Tuesdays, Wednesdays, and Thursdays are
+                        typically the cheapest days to fly, as
+                        many
+                        business travelers
+                        fly on Mondays and Fridays.</li>
+                    <li><span class="text-lg font-bold"> Avoid weekends:</span> Airfare is often more expensive on
+                        Fridays, Saturdays, and Sundays, as these are
+                        popular travel days for
+                        leisure travelers.</li>
+                    <li><span class="text-lg font-bold"> Seasonal changes:</span> Prices can fluctuate depending on the
+                        season, summer and major holidays can be
+                        more expensive because
+                        the demand increases.</li>
+                    <li><span class="text-lg font-bold">Time of day:</span> Generally, morning and red-eye flights are
+                        more expensive than midday or overnight
+                        flights.</li>
+                    <li><span class="text-lg font-bold"> Time to book:</span> Generally, it is best to book flights
+                        between 2 and 4 months before your planned
+                        departure.</li>
+                </ul>
+                <p>It’s always good to check prices on different days and at different times to see how they vary, and
+                    be
+                    flexible with
+                    your travel dates if possible. Airfare comparison websites can also be a great resource for finding
+                    the
+                    best deals.</p>
+            </section>
+            <!-- best section -->
+            <!-- flying section -->
+            <section>
+                <h1 class="text-4xl">We Make Flying Simple:</h1>
+                <p class="py-5">We are simplifying the travel experience from booking to flying and giving you more
+                    control when you
+                    travel – especially
+                    when moments arise that are out of your control. We make it easier to manage your reservations,
+                    changes,
+                    and
+                    cancellations on your trips. We are giving you peace of mind to fly when you are ready.</p>
+            </section>
+            <!-- flying section -->
+            <!-- best airline section -->
+            <section>
+                <h1 class="text-4xl">What are the best airlines to fly with?</h1>
+                <p class="py-5">The best airlines to fly with can vary depending on personal preferences and priorities,
+                    such as
+                    cost,
+                    comfort, and
+                    route networks. However, some airlines consistently receive high ratings for their service, safety,
+                    and
+                    in-flight
+                    experience.</p>
+            </section>
+            <!-- best airline section -->
+            <!-- best airline USA section -->
+            <section>
+                <h1 class="text-4xl">What are the best airlines to fly within the United States?</h1>
+                <p class="py-3">There are several airlines that are considered to be among the best in the United
+                    States:</p>
+                <ul class="list-disc px-5 pb-5">
+                    <li><span class="text-lg font-bold"> Delta Air Lines:</span> Known for its large route network, good
+                        service and comfortable seating.</li>
+                    <li><span class="text-lg font-bold"> United Airlines:</span> One of the three major U.S. airlines,
+                        with a good reputation for service and a
+                        large route network</li>
+                    <li><span class="text-lg font-bold">JetBlue: </span> Known for its comfortable seating, free
+                        in-flight entertainment and good service</li>
+                    <li><span class="text-lg font-bold"> American Airlines:</span> Another one of the three major U.S.
+                        airlines, it has a good reputation for
+                        service and reliability</li>
+                    <li><span class="text-lg font-bold"> Alaska Airlines:</span> Often praised for its friendly and
+                        attentive staff, and comfortable seating.
+                    </li>
+                    <li><span class="text-lg font-bold">Southwest Airlines: </span> Known for its low fares and
+                        no-frills service, and a good reputation for
+                        safety
+                    </li>
+                </ul>
+                <p class="py-3">These are some of the best airlines to fly within the United States, but it’s also
+                    important to note
+                    that
+                    there are many
+                    regional airlines and low-cost airlines that can have competitive prices and good service as well.
+                    It’s
+                    always a good
+                    idea to compare prices and read reviews to find the best option for your specific needs and
+                    preferences.
+                </p>
+            </section>
+            <!-- best airline USA section -->
+            <!-- considered section -->
+            <h1 class="text-4xl py-5">Some of the airlines that are considered to be among the best in the world
+                include:
+            </h1>
+            <ul class="list-disc px-5 pb-5">
+                <li><span class="text-lg font-bold">Qatar Airways: </span> Known for its luxurious in-flight experience
+                    and excellent service.</li>
+                <li><span class="text-lg font-bold">Singapore Airlines: </span> Often considered to be one of the
+                    world’s best airlines for service and comfort.
+                </li>
+                <li><span class="text-lg font-bold">Emirates:</span> Known for its wide selection of in-flight
+                    entertainment and comfortable seats.</li>
+                <li><span class="text-lg font-bold"> All Nippon Airways (ANA):</span> The Japanese airline is known for
+                    its impeccable service and excellent
+                    food
+                    and beverages.</li>
+                <li><span class="text-lg font-bold"> Cathay Pacific:</span> A well-regarded airline, known for its good
+                    service and comfortable seats.</li>
+                <li><span class="text-lg font-bold"> Japan Airlines (JAL):</span> Another Japanese airline with a
+                    reputation for excellent service and attention
+                    to
+                    detail.</li>
+                <li><span class="text-lg font-bold">Qantas: </span> Known for their good service and comfort on board,
+                    also have very good safety record</li>
+                <li><span class="text-lg font-bold"> Lufthansa:</span> German carrier known for their punctuality,
+                    safety and good service</li>
+            </ul>
+            <p class="py-5">These airlines are among the best in the world, but there’s also many other airlines that
+                can have
+                similar
+                quality, but
+                with more focused on a certain region or route networks. It’s always a great idea to check reviews and
+                ratings before
+                booking a flight, to get a sense of what other travelers have experienced.</p>
+            <!-- considered section -->
+
+            <!-- read section -->
+            <section>
+                <p class="text-2xl py-5 font-bold text-center text-red-950">**PLEASE READ BEFORE BOOKING ANY FLIGHTS
+                    WITH US OR ANY
+                    OTHER AIRLINE!**
+                </p>
+                <p class="py-3">Welcome! Right now you are at the perfect place to book a flight from Mirpur to anywhere
+                    in the
+                    world.
+                </p>
+                <p class="py-3"><span class="font-bold">WHO ARE WE?</span> We are Flight Booking 24/7 – we are exactly
+                    what you need when you travel by
+                    plane to
+                    anywhere in the world.
+                    We help book, change or cancel your plane tickets. We make it very convenient for you to travel to
+                    your
+                    desired
+                    destination within minutes. We’re very good at it too!</p>
+                <p class="py-3">You don’t have to worry about surfing online for hours and clicking all over the
+                    internet just to
+                    book a
+                    flight. NO! Not
+                    anymore! We do that all for you. In fact, that’s all that we do! You call us then simply tell us
+                    when
+                    and where you are
+                    planning your trip. Then we get to work and find you the best deals!</p>
+                <p class="py-3">All you have to do is call us! That’s it! You call us and we do all the work for you. We
+                    make it more
+                    convenient for you
+                    to travel. It’s like having a personal assistant at your convenience that can find you the best
+                    deals.
+                </p>
+                <p class="py-3">The truth is we have access to all of the BEST Airline Deals in REAL-TIME! Yup! We can
+                    find you the
+                    best-priced airline
+                    tickets at the most affordable price you can get. We can also get you the best seats and the fastest
+                    ways to get to your
+                    destination.</p>
+                <p class="py-3">We work with all major airlines from Domestic to International Travel like Delta
+                    Airlines, American
+                    Airlines, United
+                    Airlines, JetBlue Airlines, Alaska Airlines, Southwest Airlines, Qatar Airlines, Turkish Airlines,
+                    Air
+                    France, KLM Royal
+                    Dutch Airlines, and more…</p>
+                <p class="py-3">As mentioned prior, we have access to the best airline ticket prices in real-time. I
+                    highly suggest
+                    that
+                    you call our
+                    number right now and speak to a representative.</p>
+                <p class="py-3"><span class="font-bold">Flight Booking 247</span> is a website that helps consumers who
+                    are in need of flight booking
+                    reservations,
+                    flight changes and
+                    flight cancellation services. We are a travel agency with the goal to help customers find the best
+                    flight deals in the
+                    world. We provide website visitors the ability to connect to a travel concierge that will help them
+                    find
+                    the best flight
+                    deals. Everything is done through a simple phone call. We do all of the real time flight searches
+                    for
+                    you and present
+                    you the best options. It’s like having a personal assistant, we connect you to our award winning
+                    customer service and
+                    find you the best priced airline tickets. You don’t have to spend hours and hours browsing on the
+                    internet looking for
+                    flight deals. We are connected to all of the airlines worldwide and can find you the best travel
+                    deals
+                    with a simple
+                    phone call.</p>
+                <p class="py-3"><span class="font-bold">Disclaimer:</span> FlightBooking247.com is a referral source
+                    that provides information and
+                    access to a
+                    helpline
+                    to match
+                    consumers with companies that may provide certain flight details to them. FlightBooking247.com will
+                    provide flight
+                    details that may be available to you. FlightBooking247.com doesn’t promise a specific outcome or the
+                    results you may
+                    achieve by calling the helpline. The helpline is free to call but the services or programs that you
+                    pursue may have
+                    costs associated with them.</p>
+                <p class="py-3"> <span class="font-bold">TCPA DISCLOSURE:</span> By clicking the “CALL” or “SUBMIT”
+                    button anywhere on this website, you
+                    consent to
+                    receive recurring
+                    auto dialed and/ or pre-recorded telemarketing calls and or text messages from our partners in order
+                    to
+                    discuss options
+                    at the telephone number you provided or called from. You understand that you may receive a call even
+                    if
+                    my telephone
+                    number is listed on a Do Not Call list and that your consent is not a requirement of purchase. You
+                    understand that your
+                    telephone company may impose charges for this contact and that you can revoke this consent at any
+                    time.
+                    For SMS
+                    campaigns: Text STOP to cancel and HELP for help. Msg and data rates may apply. Recurring msgs up to
+                    10
+                    msgs per month.</p>
+                <p class="py-3"><span class="font-bold">Our goal</span> is to provide exceptional service. One of our
+                    agents may reach out to you to
+                    discuss your
+                    order,
+                    ask for
+                    feedback, and/or see if you need any assistance with your products, services, or plans, at the phone
+                    number you provided
+                    regardless of your do-not-call list status. You may opt-out of further contact at any time by simply
+                    telling our
+                    customer service team that you would no longer like to be contacted. In the event that our team is
+                    unable to reach you
+                    by phone, they may send you a text message letting you know that we called. Both our text messages
+                    and
+                    phone calls may
+                    be sent or connected utilizing automated software. Carrier charges may apply. You may opt-out of any
+                    future contact via
+                    text message by replying anytime with “STOP”.</p>
+
+            </section>
+        </div>
+        <footer></footer>
+
+
+        <div>
+            <a href="#" class="text-5xl text-green-600 font-extrabold fixed bottom-20 left-5/5 right-3"><i
+                    class="fa-solid fa-arrow-up-from-bracket"></i></a>
+        </div>
+        <!-- small  -->
+        <div class="fixed bottom-0 left-0 right-0 bg-blue-800 p-4 text-white shadow-md mb-2 lg:hidden">
+            <a href="tel:+1-866-609-1398">
+                <button class="text-2xl flex items-center space-x-2 relative left-[28%]">
+                    <span class="w-8 h-8 "><img src="./Assets/Image/call.png" alt=""></span>
+                    <span>Call Now</span>
+                </button>
+            </a>
+        </div>
+        <!-- read section -->
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- internal js script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#departureDate", {
+                enableTime: false, // Set to true if you want to enable time selection
+                dateFormat: "d-m-Y", // Format of the selected date
+            });
+        });
+    </script>
+    <!-- <script>
+        function validateForm() {
+            let isValid = true;
+
+            // Validate trip select
+            const tripSelect = document.getElementById('trip');
+            const tripError = document.getElementById('tripError');
+            tripError.textContent = '';
+
+            if (tripSelect.value === '') {
+                tripError.textContent = 'Please select a trip.';
+                isValid = false;
+            }
+
+            // Validate email inputs
+            const email1Input = document.getElementById('email1');
+            const email1Error = document.getElementById('email1Error');
+            email1Error.textContent = '';
+
+            if (!email1Input.checkValidity()) {
+                email1Error.textContent = 'Please enter a valid email address.';
+                isValid = false;
+            }
+
+            // Repeat similar blocks for other email inputs
+
+            return isValid;
+        }
+    </script> -->
+    <!-- internal js script -->
+</body>
+
+</html>
