@@ -28,7 +28,56 @@
     <title>Flight Booking Airlines</title>
 
 
+    <style>
+        @keyframes moveLeftRight {
 
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-20px);
+            }
+
+            50% {
+                transform: translateX(0);
+            }
+
+            75% {
+                transform: translateX(20px);
+            }
+        }
+
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup-content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 
 </head>
 
@@ -50,10 +99,15 @@
                             class="w-56 h-56   rounded-full p-1 relative left-[22%] md:left-[35%]">
                     </section>
                     <!-- banner text section -->
-                    <p>
+                    <!-- <p>
                         <span class="badge bg-green-500   badge-sm relative top-[1px]"> </span>
                         <span class="text-xl text-white">AGENTS AVAILABLE NOW!</span>
-                    </p>
+                    </p> -->
+                    <section class="pt-4 animate-pulse" style="animation-duration: 1s; animation-iteration-count: 3;">
+                        <p><span class="badge bg-green-500 badge-sm relative top-[1px]"></span>
+                            <span class="text-xl text-white"> AGENTS AVAILABLE NOW!</span>
+                        </p>
+                    </section>
                     <p class="text-4xl font-bold text-white pt-3">Call Us Now!</p>
 
 
@@ -73,9 +127,8 @@
                     <section>
                         <a href="tel:+1-866-609-1398">
                             <button>
-                                <p
-                                    class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
-
+                                <p class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0 before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50"
+                                    style="animation: moveLeftRight 2s ease-in-out 3;">
                                     <span class="text-white text-2xl pt-1 pr-2"><i
                                             class="fa-solid fa-phone-volume"></i></span>
                                     <span class="pt-0 pl-2 text-4xl text-white">Call Now</span>
@@ -83,7 +136,12 @@
                             </button>
                         </a>
                     </section>
-                    <section class="pt-4">
+                    <!-- <section class="pt-4 animate-pulse" style="animation-duration: calc(2s + (Math.random() * 5s))">
+                        <p><span class="badge bg-green-500 badge-sm relative top-[1px]"></span>
+                            <span class="text-xl text-white"> NO HOLD TIME! NO WAITING!</span>
+                        </p>
+                    </section> -->
+                    <section class="pt-4 animate-pulse" style="animation-duration: 1s; animation-iteration-count: 3;">
                         <p><span class="badge bg-green-500 badge-sm relative top-[1px]"></span>
                             <span class="text-xl text-white"> NO HOLD TIME! NO WAITING!</span>
                         </p>
@@ -104,12 +162,21 @@
                 <section class="pt-5">
                     <p class="bg-red-700 lg:w-3/4 mx-auto py-2 text-2xl uppercase">CALL FOR TICKET DEALS!</p>
                 </section>
+
                 <section class="">
                     <a href="tel:+1-866-609-1398">
-                        <button>
+                        <!-- <button>
                             <p
                                 class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
 
+                                <span class="text-white text-2xl pt-1 pr-2"><i
+                                        class="fa-solid fa-phone-volume"></i></span>
+                                <span class="pt-0 pl-2 text-4xl text-white">Call Now</span>
+                            </p>
+                        </button> -->
+                        <button>
+                            <p class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0 before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-0"
+                                style="animation: moveLeftRight 2s ease-in-out 3;">
                                 <span class="text-white text-2xl pt-1 pr-2"><i
                                         class="fa-solid fa-phone-volume"></i></span>
                                 <span class="pt-0 pl-2 text-4xl text-white">Call Now</span>
@@ -185,12 +252,12 @@
                                     required /> -->
 
                             </div>
-                            <a href="tel:+1-866-609-1398"></a>
-                            <button type="submit"
+
+                            <button type="text"
                                 class="py-2 px-5 mb-4 mt-8 text-white w-full text-3xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-0">
-                                Submit
+                                <a href="tel:+1-866-609-1398"> Submit</a>
                             </button>
-                            </a>
+
 
 
                         </form>
@@ -753,6 +820,42 @@
             </button> -->
         </a>
         <!-- read section -->
+
+        <!-- popup -->
+        <div id="popup-container" class="popup-container">
+            <!-- Close Button -->
+            <button id="close-btn" class="close-btn" onclick="closePopup()">Close</button>
+            <!-- Popup Content Goes Here -->
+            <div class="popup-content">
+                <section>
+                    <div class="hero w-full h-[700px]" style="background-image: url(./Assets/Image/seat.jpg);">
+                        <div class="hero-overlay bg-opacity-60"></div>
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="max-w-xl text-white">
+                                <section class="flex justify-center text-center  ">
+                                    <img src="./Assets/Image/dial.png" alt="" class="w-44 h-40">
+                                </section>
+                                <h1 class="mb-5 text-5xl font-bold">We’re Available 24/7</h1>
+                                <p class="mb-5 text-base">Call Us Now! We Can Help You With Anything Related To Airline
+                                    Reservations!
+                                </p>
+                                <a href="tel:+1-866-609-1398">
+                                    <button>
+                                        <p class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0 before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50"
+                                            style="animation: moveLeftRight 2s ease-in-out 3;">
+                                            <span class="text-white text-2xl pt-1 pr-2"><i
+                                                    class="fa-solid fa-phone-volume"></i></span>
+                                            <span class="pt-0 pl-2 text-4xl text-white">Call Now</span>
+                                        </p>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- popup -->
     </header>
 
 
@@ -793,6 +896,21 @@
                 dateFormat: "d-m-Y", // Format of the selected date
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show the popup on page load
+            showPopup();
+        });
+
+        function showPopup() {
+            var popupContainer = document.getElementById("popup-container");
+            popupContainer.style.display = "flex";
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById("popup-container");
+            popupContainer.style.display = "none";
+        }
     </script>
 
 </body>
