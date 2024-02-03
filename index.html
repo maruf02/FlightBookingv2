@@ -32,7 +32,7 @@
 
 </head>
 
-<body class="bg-white w-full h-fit pb-32 font-sans text-black">
+<body class="bg-white w-full h-fit pb-32 font-sans text-black overflow-x-hidden">
     <header>
         <!-- Banner section start -->
         <div class="hero h-[800px]" style="background-image: url(./Assets/Image/banner.jpg);">
@@ -217,7 +217,7 @@
         <!-- card Section -->
         <div class="container mx-auto pt-16 flex flex-col md:flex-row justify-center gap-5">
             <!-- first card -->
-            <div class="card w-96  bg-transparent shadow-xl  ">
+            <div class="card lg:w-1/4  bg-transparent shadow-xl  ">
                 <section class="text-white mx-auto pt-10">
                     <p class="w-32 h-32 bg-red-900 rounded-full overflow-hidden  text-center">
                         <i
@@ -234,7 +234,7 @@
             </div>
             <!-- first card -->
             <!-- first card -->
-            <div class="card w-96  bg-transparent shadow-xl  ">
+            <div class="card lg:w-1/4  bg-transparent shadow-xl  ">
                 <section class="text-white mx-auto pt-10">
                     <p class="w-32 h-32 bg-black rounded-full overflow-hidden  text-center">
                         <i
@@ -252,7 +252,7 @@
             </div>
             <!-- first card -->
             <!-- first card -->
-            <div class="card w-96  bg-transparent shadow-xl  ">
+            <div class="card lg:w-1/4  bg-transparent shadow-xl  ">
                 <section class="text-white mx-auto pt-10">
                     <p class="w-32 h-32 bg-green-900 rounded-full overflow-hidden  text-center">
                         <i
@@ -679,27 +679,21 @@
 
 
         <div>
-            <a href="#" class="text-5xl text-green-600 font-extrabold fixed bottom-20 left-[80%] right-0"><i
+            <a href="#"
+                class="text-5xl text-green-600 font-extrabold fixed bottom-20 left-[85%] md:left-[93%] lg:left-[96%] right-0"><i
                     class="fa-solid fa-arrow-up-from-bracket"></i></a>
         </div>
         <!-- small  -->
-        <!-- <div
-            class="fixed bottom-0 mx-auto w-12/12 z-100 left-0 right-0 bg-blue-800 p-4 text-white shadow-md mb-2 lg:hidden">
+        <div
+            class="fixed bottom-0 mx-auto w-12/12 z-100 left-0 right-0 bg-blue-800 p-4 text-white shadow-md mb-1 lg:hidden">
             <a href="tel:+1-866-609-1398">
                 <button class="text-2xl flex items-center space-x-2 relative left-[28%]">
                     <span class="w-8 h-8 "><img src="./Assets/Image/call.png" alt=""></span>
                     <span>Call Now</span>
                 </button>
             </a>
-        </div> -->
-        <div class="fixed bottom-0 left-0 right-0 bg-blue-800 p-4 text-white shadow-md">
-            <a href="tel:+1-866-609-1398">
-                <button class="text-2xl flex items-center space-x-2">
-                    <span class="w-8 h-8"><img src="./Assets/Image/call.png" alt=""></span>
-                    <span>Call Now</span>
-                </button>
-            </a>
         </div>
+
         <!-- read section -->
     </header>
 
@@ -742,36 +736,7 @@
             });
         });
     </script>
-    <!-- <script>
-        function validateForm() {
-            let isValid = true;
 
-            // Validate trip select
-            const tripSelect = document.getElementById('trip');
-            const tripError = document.getElementById('tripError');
-            tripError.textContent = '';
-
-            if (tripSelect.value === '') {
-                tripError.textContent = 'Please select a trip.';
-                isValid = false;
-            }
-
-            // Validate email inputs
-            const email1Input = document.getElementById('email1');
-            const email1Error = document.getElementById('email1Error');
-            email1Error.textContent = '';
-
-            if (!email1Input.checkValidity()) {
-                email1Error.textContent = 'Please enter a valid email address.';
-                isValid = false;
-            }
-
-            // Repeat similar blocks for other email inputs
-
-            return isValid;
-        }
-    </script> -->
-    <!-- internal js script -->
 </body>
 
 </html>
