@@ -774,12 +774,12 @@
         </div>
         <p class=""></p>
         <footer class="footer footer-center p-10 bg-white text-black text-lg rounded mt-10">
-            <nav class="grid grid-flow-col gap-4">
+            <nav class="flex flex-wrap align-middle justify-center gap-4">
                 <a href="tel:+1-866-609-1398" class="link link-hover">About us</a>
                 <a href="tel:+1-866-609-1398" class="link link-hover">Contact</a>
                 <a href="https://flightbooking247.com/wpautoterms/sms-terms/" class="link link-hover">Sms Terms</a>
                 <a href="tel:+1-866-609-1398" class="link link-hover">Privacy Policy</a>
-                <a href="tel:+1-866-609-1398" class="link link-hover">Terms and Conditions</a>
+                <a href="tel:+1-866-609-1398" class="link link-hover">Terms & Conditions</a>
             </nav>
             <nav>
                 <div class="grid grid-flow-col gap-4">
@@ -803,8 +803,8 @@
                         </svg></a>
                 </div>
             </nav>
-            <aside>
-                <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+            <aside class="flex flex-wrap">
+                <p>Copyright © <span id="currentYear"></span> - All right reserved by ACME Industries Ltd</p>
             </aside>
         </footer>
 
@@ -931,6 +931,8 @@
 
         <!-- internal js script -->
         <script>
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = currentYear;
             document.addEventListener('DOMContentLoaded', function () {
                 flatpickr("#departureDate", {
                     enableTime: false, // Set to true if you want to enable time selection
