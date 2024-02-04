@@ -940,7 +940,10 @@
             // ***************************
             document.addEventListener("DOMContentLoaded", function () {
                 // Show the popup on page load
-                showPopup();
+                setTimeout(function () {
+                    showPopup();
+                }, 4000);
+
             });
 
             function showPopup() {
