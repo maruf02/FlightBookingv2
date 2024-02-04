@@ -205,7 +205,7 @@
                 <section class="border-4 border-dashed border-gray-400 shadow-2xl lg:w-4/5 mx-auto h-full">
 
                     <div>
-                        <form class="p-8 flex-1" onsubmit="showPopup(event)">
+                        <form id="tripForm" class="p-8 flex-1" onsubmit="submitForm(event)">
 
                             <div class="space-y-2  text-black">
                                 <label htmlFor="email" class="block text-left pl-2 text-xl">Which Trip</label>
@@ -264,11 +264,11 @@
                                     required /> -->
 
                             </div>
-                            <a href="tel:+1-866-609-1398">
-                                <button type="submit"
-                                    class="py-2 px-5 mb-4 mt-8 text-white w-full text-3xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-0">
-                                    Submit
-                                </button></a>
+
+                            <button type="submit"
+                                class="py-2 px-5 mb-4 mt-8 text-white w-full text-3xl bg-blue-800 overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0  before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-0">
+                                Submit
+                            </button>
 
 
 
@@ -893,7 +893,7 @@
             </div>
         </div>
         <!-- popup -->
-
+        <button onclick="getDistrict()">Get My District</button>
         <!-- submit popup -->
         <!-- Popup Container
         <div id="popup-containerS" class="popup-containerS">
@@ -946,6 +946,19 @@
         <script>
             const currentYear = new Date().getFullYear();
             document.getElementById('currentYear').textContent = currentYear;
+
+
+            function showPopup(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Your existing form handling logic...
+
+                // Redirect to the phone number
+                window.location.href = "tel:+1-866-609-1398";
+            }
+
+
             document.addEventListener('DOMContentLoaded', function () {
                 flatpickr("#departureDate", {
                     enableTime: false, // Set to true if you want to enable time selection
@@ -994,6 +1007,35 @@
                 toggleBackgroundColor();
             });
             // ***********************************
+
+            // ***********location**********
+            async function getDistrict() {
+                try {
+                    // Use the cors-anywhere proxy to avoid CORS issues
+                    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+                    const apiUrl = 'https://ipapi.co/json/';
+
+                    const response = await fetch(proxyUrl + apiUrl);
+                    const data = await response.json();
+
+                    // Extract and display the district or city information
+                    const district = data.city || data.region;
+                    alert(`Your approximate district or city: ${district}`);
+                } catch (error) {
+                    console.error('Error fetching location:', error.message);
+                }
+            }
+
+            // ***************form submited*************************
+            function submitForm(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Add your form data processing logic here
+
+                // Redirect to abc.html
+                window.location.href = './Thank-you.html';
+            }
         </script>
 
 </body>
