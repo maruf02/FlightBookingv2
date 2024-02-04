@@ -67,7 +67,7 @@
             top: 10px;
             right: 10px;
             padding: 10px;
-            background-color: #333;
+            /*background-color: #333;*/
             color: white;
             border: none;
             cursor: pointer;
@@ -89,12 +89,12 @@
             <div class="hero-content text-center text-neutral-content">
                 <div class="">
                     <!-- logo section -->
-                    <Section class="flex gap-2 pt-8">
+                    <Section class="flex gap-2 pt-14">
                         <img src="./Assets/Image/logo.png" alt=""
                             class="w-4/5  md:w-2/5 h-16 -mt-20 rounded-3xl relative left-[10%] md:left-[30%]">
                     </Section>
                     <!-- banner pic section -->
-                    <section class="pt-15 pb-8 ">
+                    <section class="pt-15 pb-4 ">
                         <img src="./Assets/Image/ss.webp" alt=""
                             class="w-56 h-56   rounded-full p-1 relative left-[22%] md:left-[35%]">
                     </section>
@@ -127,13 +127,22 @@
                     <section>
                         <a href="tel:+1-866-609-1398">
                             <button>
+                                <p
+                                    class="flex px-8 py-2 px-5 mb-4 mt-8  w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-yellow-200 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0 before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50">
+                                    <span class="text-white text-2xl pt-1 pr-2"><i
+                                            class="fa-solid fa-phone-volume"></i></span>
+                                    <span class="pt-0 pl-2 text-4xl text-white animate-pulse font-bold"
+                                        style="animation-duration: 0.5s; animation-iteration-count: 30;">Call Now</span>
+                                </p>
+                            </button>
+                            <!-- <button>
                                 <p class="flex px-8 py-2 px-5 mb-4 mt-8 w-full text-2xl bg-black overflow-hidden shadow-lg border-4 rounded-md border-double border-lime-500 before:block before:absolute before:translate-x-full before:inset-0 before:bg-[#0095ff] before:hover:translate-x-0 before:duration-300 before:rounded-s-full before:-z-10 after:-z-10 after:rounded-e-full after:duration-300 after:hover:translate-x-0 after:block after:absolute after:-translate-x-full after:inset-0 after:bg-[#0095ff] relative inline-block hover:text-white z-50"
-                                    style="animation: moveLeftRight 2s ease-in-out 10;">
+                                    style="animation-duration: 1s; animation-iteration-count: 10;">
                                     <span class="text-white text-2xl pt-1 pr-2"><i
                                             class="fa-solid fa-phone-volume"></i></span>
                                     <span class="pt-0 pl-2 text-4xl text-white">Call Now</span>
                                 </p>
-                            </button>
+                            </button> -->
                         </a>
                     </section>
                     <!-- <section class="pt-4 animate-pulse" style="animation-duration: calc(2s + (Math.random() * 5s))">
@@ -400,7 +409,7 @@
         </div>
         <!-- seat section -->
         <!-- description section -->
-        <div class="container mx-auto px-2 lg:w-2/5  mt-16">
+        <div class="container mx-auto px-2 lg:w-4/5  mt-16">
             <section>
                 <h1 class="text-4xl text-black">Flight Booking 247 <span class="text-blue-700">Airline
                         Reservations</span></h1>
@@ -823,7 +832,7 @@
         <!-- popup -->
         <div id="popup-container" class="popup-container">
             <!-- Close Button -->
-            <button id="close-btn" class="close-btn" onclick="closePopup()">Close</button>
+            <button id="close-btn" class="close-btn" onclick="closePopup()">X</button>
             <!-- Popup Content Goes Here -->
             <div class="popup-content">
                 <section>
@@ -868,7 +877,6 @@
             </div>
         </div>  -->
         <!-- submit popup -->
-    </header>
 
 
 
@@ -900,31 +908,59 @@
 
 
 
-    <!-- internal js script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            flatpickr("#departureDate", {
-                enableTime: false, // Set to true if you want to enable time selection
-                dateFormat: "d-m-Y", // Format of the selected date
+
+
+
+
+
+        <!-- internal js script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                flatpickr("#departureDate", {
+                    enableTime: false, // Set to true if you want to enable time selection
+                    dateFormat: "d-m-Y", // Format of the selected date
+                });
             });
-        });
-        // ***************************
-        document.addEventListener("DOMContentLoaded", function () {
-            // Show the popup on page load
-            showPopup();
-        });
+            // ***************************
+            document.addEventListener("DOMContentLoaded", function () {
+                // Show the popup on page load
+                showPopup();
+            });
 
-        function showPopup() {
-            var popupContainer = document.getElementById("popup-container");
-            popupContainer.style.display = "flex";
-        }
+            function showPopup() {
+                var popupContainer = document.getElementById("popup-container");
+                popupContainer.style.display = "flex";
+            }
 
-        function closePopup() {
-            var popupContainer = document.getElementById("popup-container");
-            popupContainer.style.display = "none";
-        }
-        // ****************************
-    </script>
+            function closePopup() {
+                var popupContainer = document.getElementById("popup-container");
+                popupContainer.style.display = "none";
+            }
+            // ****************************
+            // ***********************************
+            document.addEventListener("DOMContentLoaded", function () {
+                var toggleButton = document.getElementById("toggleButton");
+                var iterationCount = 0;
+
+                function toggleBackgroundColor() {
+                    if (iterationCount < 10) {
+                        // Toggle background color
+                        var bgColor = iterationCount % 2 === 0 ? "black" : "#0095ff";
+                        toggleButton.style.backgroundColor = bgColor;
+
+                        // Increase iteration count
+                        iterationCount++;
+
+                        // Call the function again after 1 second
+                        setTimeout(toggleBackgroundColor, 1000);
+                    }
+                }
+
+                // Start the animation
+                toggleBackgroundColor();
+            });
+            // ***********************************
+        </script>
 
 </body>
 
